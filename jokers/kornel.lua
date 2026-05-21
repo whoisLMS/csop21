@@ -1,0 +1,40 @@
+SMODS.Joker {
+    key = "kornel",
+    atlas = "kornel",
+    rarity = 3,
+    cost = 8,
+    discovered = true,
+    pos = { x = 0, y = 0 },
+    config = { extra = { Xmult = 1, Xmult_gain = 1 } },
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.Xmult_gain, card.ability.extra.Xmult } }
+    end,
+    calculate = function(self, card, context)
+        if context.before and not context.blueprint then
+            local reset = false
+            if context.scoring_name ~= "21_67" then
+                reset = true
+            end
+            if reset then
+                if card.ability.extra.Xmult > 1 then
+                    card.ability.extra.Xmult = 1
+                    return {
+                        message = localize('k_reset')
+                    }
+                end
+            else
+                SMODS.scale_card(card, {
+                    ref_table = card.ability.extra,
+                    ref_value = 'Xmult',
+                    scalar_value = 'Xmult_gain',
+                    massage_colour = G.C.ATTENTION
+            })
+            end
+        end
+        if context.joker_main then
+            return {
+                xmult = card.ability.extra.Xmult
+            }
+        end
+    end,
+}

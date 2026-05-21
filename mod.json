@@ -1,0 +1,9 @@
+{
+  "id": "csop21",
+  "name": "csop21",
+  "author": ["LM S"],
+  "description": "csop21, don't question it...",
+  "prefix": "21",
+  "main_file": "main.lua",
+  "version": "1.3.0" 
+}
