@@ -10,33 +10,43 @@ SMODS.Joker {
         return { vars = { card.ability.extra.copies } }
     end,
     calculate = function(self, card, context)
-        if context.ending_shop and G.jokers.cards[1] then
-            local count = 1
-            local event
-            event = Event {
-                blockable = false,
-                blocking = false,
-                pause_force = true,
-                no_delete = true,
-                trigger = "after",
-                delay = 0.2,
-                timer = "UPTIME",
-                func = function()
-                    local card_to_copy, _ = pseudorandom_element(G.jokers.cards, 'j_21_csabesz')
-                    local copied_card = copy_card(card_to_copy)
-                    copied_card:set_edition("e_negative", true)
-                    copied_card:add_to_deck()
-                    G.jokers:emplace(copied_card)
-                    if count == card.ability.extra.copies then
-                        return true
-                    else
-                        count = count + 1
-                        event.start_timer = false
-                    end
+        if context.ending_shop and G.jokers.cards[2] then
+            local copiable_jokers = {}
+            for i = 1, #G.jokers.cards do
+                if G.jokers.cards[i] ~= card then
+                    copiable_jokers[#copiable_jokers + 1] = G.jokers.cards[i]
                 end
-            }
-            G.E_MANAGER:add_event(event)
-            return { message = localize('k_duplicated_ex') }
+            end
+
+            local joker_to_copy = pseudorandom_element(copiable_jokers, '21_csabesz')
+
+            if joker_to_copy then
+                local count = 1
+                local event
+                event = Event {
+                    blockable = false,
+                    blocking = false,
+                    pause_force = true,
+                    no_delete = true,
+                    trigger = "after",
+                    delay = 0.2,
+                    timer = "UPTIME",
+                    func = function()
+                        local copied_card = copy_card(joker_to_copy)
+                        copied_card:set_edition("e_negative", true)
+                        copied_card:add_to_deck()
+                        G.jokers:emplace(copied_card)
+                        if count == card.ability.extra.copies then
+                            return true
+                        else
+                            count = count + 1
+                            event.start_timer = false
+                        end
+                    end
+                }
+                G.E_MANAGER:add_event(event)
+                return { message = localize('k_duplicated_ex') }
+            end
         end
     end,
 }
