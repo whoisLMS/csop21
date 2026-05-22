@@ -143,7 +143,7 @@ return
                     "{C:attention}#1#{} random {C:attention}joker{}",
                     "card in your possession",
                     "at the end of the {C:attention}shop.",
-                    "{s:0.8}(Can {C:attention}NOT{} copy itself.)"
+                    "{s:0.8}(Can NOT copy itself.)"
                 }
             }
         },
