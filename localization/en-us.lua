@@ -142,8 +142,7 @@ return
                     "Creates a {C:dark_edition}Negative{} copy of",
                     "{C:attention}#1#{} random {C:attention}joker{}",
                     "card in your possession",
-                    "at the end of the {C:attention}shop.",
-                    "{s:0.8}(Only copies itself, if it is your only joker.)"
+                    "at the end of the {C:attention}shop."
                 }
             }
         },
