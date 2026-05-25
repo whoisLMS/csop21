@@ -10,10 +10,10 @@ SMODS.Joker
             mult = 2,
             mult_scale = 1.5,
             numerator = 1,
-            denominator = 4
+            denominator = 6
         }
     },
-    rarity = 2,
+    rarity = 1,
     cost = 0,
     discovered = true,
     loc_vars = function (self, info_queue, card)

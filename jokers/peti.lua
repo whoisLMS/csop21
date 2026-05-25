@@ -8,7 +8,7 @@ SMODS.Joker
         extra =
         {
             numerator = 1,
-            denominator = 4,
+            denominator = 6,
             xmult = 21
         }
     },
