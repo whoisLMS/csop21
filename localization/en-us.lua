@@ -59,9 +59,10 @@ return
                 name = "Mr. Prezident",
                 text =
                 {
-                    "{C:mult}+#1#{} Mult,",
-                    "gains {X:red,C:white}X#2#{} Mult at the end of round.",
-                    "{C:green}#3# in #4#{} chance",
+                    "{C:mult}+#1#{} Mult, {C:chips}+#3#{} Chips,",
+                    "{X:red,C:white}X#2#{} Mult, {X:blue,C:white}X#4#{} Chips",
+                    "at the end of round.",
+                    "{C:green}#5# in #6#{} chance",
                     "he leaves to the {C:attention}HÖK office.{}"
                 }
             },
@@ -70,7 +71,9 @@ return
                 name = "Mark",
                 text =
                 {
-                    "{X:red,C:white} X#3# {} Mult,",
+                    "{X:red,C:white} X#3# {} Mult, {X:blue,C:white} X#4# {} Chips",
+                    "{C:mult}+#5#{} Mult, {C:chips}+#5#{} Chips",
+                    "at the end of round.",
                     "{C:green}#1# in #2#{} chance",
                     "he leaves to the {C:attention}HÖK office.{}"
                 }

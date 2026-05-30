@@ -9,7 +9,9 @@ SMODS.Joker
         {
             numerator = 1,
             denominator = 6,
-            xmult = 21
+            xmult = 1,
+            xchips = 1,
+            scale = 0.5
         }
     },
     rarity = 2,
@@ -23,7 +25,9 @@ SMODS.Joker
             {
                 numerator,
                 denominator,
-                card.ability.extra.xmult
+                card.ability.extra.xmult,
+                card.ability.extra.xchips,
+                card.ability.extra.scale
             }
         }
     end,
@@ -39,8 +43,23 @@ SMODS.Joker
         end
         if context.joker_main then
             return {
-                xmult = card.ability.extra.xmult
+                xmult = card.ability.extra.xmult,
+                xchips = card.ability.extra.xchips
             }
+        end
+        if context.end_of_round and context.main_eval then
+            SMODS.scale_card(card, {
+                    ref_table = card.ability.extra,
+                    ref_value = 'xmult',
+                    scalar_value = 'scale',
+                    massage_colour = G.C.ATTENTION
+            })
+            SMODS.scale_card(card, {
+                    ref_table = card.ability.extra,
+                    ref_value = 'xchips',
+                    scalar_value = 'scale',
+                    massage_colour = G.C.ATTENTION
+            })
         end
     end
 
