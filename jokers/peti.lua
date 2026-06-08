@@ -47,7 +47,7 @@ SMODS.Joker
                 xchips = card.ability.extra.xchips
             }
         end
-        if context.end_of_round and context.main_eval then
+        if context.end_of_round and context.main_eval and not context.blueprint then
             SMODS.scale_card(card, {
                     ref_table = card.ability.extra,
                     ref_value = 'xmult',
