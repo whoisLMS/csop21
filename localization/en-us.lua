@@ -2,6 +2,17 @@ return
 {
     descriptions =
     {
+        Tarot =
+        {
+            c_21_weakness = {
+                name = "Weakness",
+                text = {
+                    "Decreases rank of",
+                    "up to {C:attention}#1#{} selected",
+                    "cards by {C:attention}1",
+                },
+            },
+        },
         Back =
         {
             b_21_csop21 =

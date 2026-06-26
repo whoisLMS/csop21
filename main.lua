@@ -100,10 +100,18 @@ SMODS.Atlas({
     py = 95
 })
 
-    -- Poker hands
+    -- Planet cards
 SMODS.Atlas({
     key = "67",
     path = "6-7.png",
+    px = 71,
+    py = 95
+})
+
+    -- Tarot cards
+SMODS.Atlas({
+    key = "weakness",
+    path = "weakness.png",
     px = 71,
     py = 95
 })
