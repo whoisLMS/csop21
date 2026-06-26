@@ -3,6 +3,8 @@ SMODS.Consumable
     key = 'weakness',
     set = 'Tarot',
     pos = { x = 0, y = 0 },
+    discovered = true,
+    hidden = false,
     atlas = "weakness",
     cost = 3,
     config = { max_highlighted = 2 },
