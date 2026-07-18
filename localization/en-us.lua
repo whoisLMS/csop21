@@ -23,7 +23,6 @@ return
                     "We are so fucking goated bro."
                 }
             },
-
             b_21_java =
             {
                 name = "Java",
@@ -31,6 +30,15 @@ return
                 {
                     "Start with {C:legendary,E:1}Csabesz{},",
                     "{C:attention}-3{} joker slots."
+                }
+            },
+            b_21_random =
+            {
+                name = "random xd",
+                text =
+                {
+                    "What the fuck is on the board..?",
+                    "(pseudorandom deck)"
                 }
             }
         },
