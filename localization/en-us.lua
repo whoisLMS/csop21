@@ -167,6 +167,15 @@ return
                     "at the end of the {C:attention}shop.",
                     "{s:0.8}(Can NOT copy itself.)"
                 }
+            },
+            j_21_bogyi = {
+                name = "Bogyi",
+                text =
+                {
+                    "{X:blue,C:white} X#1# {} Chips",
+                    "when a non-face card",
+                    "is scored."
+                }
             }
         },
         Planet =

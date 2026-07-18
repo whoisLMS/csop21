@@ -85,6 +85,13 @@ SMODS.Atlas({
     py = 95
 })
 
+SMODS.Atlas({
+    key = "bogyi",
+    path = "bogyi.png",
+    px = 71,
+    py = 95
+})
+
     -- Decks
 SMODS.Atlas({
     key = "csop21",
@@ -102,7 +109,7 @@ SMODS.Atlas({
 
 SMODS.Atlas({
     key = "random",
-    path = "java.png",
+    path = "random.png",
     px = 71,
     py = 95
 })
