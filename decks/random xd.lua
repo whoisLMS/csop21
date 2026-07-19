@@ -12,8 +12,8 @@ SMODS.Back
                 for i = 1, 52 do
                     byte_val = 0
                     seed = G.GAME.pseudorandom.seed
-                    for i = 1, 8 do
-                        byte_val = string.byte(seed, i)
+                    for j = 1, 8 do
+                        byte_val = string.byte(seed, j)
                     end
                     byte_val = (byte_val - i) * i
                     switch_seal =
