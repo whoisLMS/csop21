@@ -20,7 +20,8 @@ return
                 name = "csop21",
                 text =
                 {
-                    "We are so fucking goated bro."
+                    "Start with one of the new Jokers.",
+                    "({C:green}Uncommon{} or {C:red}Epic{}.)"
                 }
             },
             b_21_java =
@@ -37,8 +38,7 @@ return
                 name = "random xd",
                 text =
                 {
-                    "What the fuck is on the board..?",
-                    "(pseudorandom deck)"
+                    "Pseudorandom deck.",
                 }
             }
         },
