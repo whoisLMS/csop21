@@ -11,18 +11,7 @@ SMODS.Joker {
     end,
     calculate = function(self, card, context)
         if context.before and not context.blueprint then
-            local reset = false
-            if context.scoring_name ~= "21_67" then
-                reset = true
-            end
-            if reset then
-                if card.ability.extra.Xmult > 1 then
-                    card.ability.extra.Xmult = 1
-                    return {
-                        message = localize('k_reset')
-                    }
-                end
-            else
+            if context.scoring_name == "21_67" then
                 SMODS.scale_card(card, {
                     ref_table = card.ability.extra,
                     ref_value = 'Xmult',

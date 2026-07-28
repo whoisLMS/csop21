@@ -104,8 +104,7 @@ return
                 {
                     "{X:red,C:white} X#2# {} Mult,",
                     "gains {C:mult}+#1#{} Mult",
-                    "after every {C:attention}6-7{} played in a row.",
-                    "{s:0.8}(Resets when playing a different hand.)"
+                    "after every {C:attention}6-7{} played."
                 }
             },
             j_21_grown =
@@ -187,8 +186,7 @@ return
                     "({V:1}lvl.#1#{}) Level up",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Mult and",
-                    "{C:chips}+#4#{} Chips",
-                    "{C:attention}(blue seals and telescope do NOT work){}"
+                    "{C:chips}+#4#{} Chips"
                 },
             }
         }

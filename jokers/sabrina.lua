@@ -13,7 +13,7 @@ SMODS.Joker {
         if context.buying_self then
             return
             {
-                play_sound("21_sabrina", 1, 1)
+                play_sound("21_sabrina", 1, 0.5)
             }
         end
         

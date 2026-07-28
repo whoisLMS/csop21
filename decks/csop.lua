@@ -22,10 +22,10 @@ SMODS.Back
                         jokeyy = "j_21_ziad"
                     end,
                     [2] = function()
-                        jokeyy = "j_21_prezi"
+                        jokeyy = "j_21_bogyi"
                     end,
                     [3] = function ()
-                        jokeyy = "j_21_peti"
+                        jokeyy = "j_21_peti" -- halál miatt ne (?)
                     end,
                     [4] = function ()
                         jokeyy = "j_21_kornel"

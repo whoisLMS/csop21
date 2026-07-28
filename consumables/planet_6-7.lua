@@ -7,7 +7,12 @@ SMODS.Consumable
     atlas = "67",
     cost = 3,
     pos = { x = 0, y = 0},
-    config = { extra = { hand_type = '21_67' } },
+    config =  { hand_type = '21_67' } ,
+
+    pools =
+    {
+        ["Planet"] = true
+    },
 
     set_card_type_badge = function(self, card, badges)
         badges[1] = create_badge(localize('k_planet'), get_type_colour(self or card.config, card), nil, 1.2)
@@ -16,11 +21,11 @@ SMODS.Consumable
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                G.GAME.hands[card.ability.extra.hand_type].level,
-                localize(card.ability.extra.hand_type, 'poker_hands'),
-                G.GAME.hands[card.ability.extra.hand_type].l_mult,
-                G.GAME.hands[card.ability.extra.hand_type].l_chips,
-                colours = { (G.GAME.hands[card.ability.extra.hand_type].level == 1 and G.C.UI.TEXT_DARK or G.C.HAND_LEVELS[math.min(7, G.GAME.hands[card.ability.extra.hand_type].level)]) }
+                G.GAME.hands[card.ability.hand_type].level,
+                localize(card.ability.hand_type, 'poker_hands'),
+                G.GAME.hands[card.ability.hand_type].l_mult,
+                G.GAME.hands[card.ability.hand_type].l_chips,
+                colours = { (G.GAME.hands[card.ability.hand_type].level == 1 and G.C.UI.TEXT_DARK or G.C.HAND_LEVELS[math.min(7, G.GAME.hands[card.ability.hand_type].level)]) }
             }
         }
     end,
@@ -49,9 +54,9 @@ SMODS.Consumable
             return true end }))
         update_hand_text({sound = 'button', volume = 0.7, pitch = 0.9, delay = 0}, {level='+1'})
         delay(1.3)
-        G.GAME.hands[card.ability.extra.hand_type].chips = G.GAME.hands[card.ability.extra.hand_type].chips + G.GAME.hands[card.ability.extra.hand_type].l_chips
-        G.GAME.hands[card.ability.extra.hand_type].mult = G.GAME.hands[card.ability.extra.hand_type].mult + G.GAME.hands[card.ability.extra.hand_type].l_mult
-        G.GAME.hands[card.ability.extra.hand_type].level = G.GAME.hands[card.ability.extra.hand_type].level+1
+        G.GAME.hands[card.ability.hand_type].chips = G.GAME.hands[card.ability.hand_type].chips + G.GAME.hands[card.ability.hand_type].l_chips
+        G.GAME.hands[card.ability.hand_type].mult = G.GAME.hands[card.ability.hand_type].mult + G.GAME.hands[card.ability.hand_type].l_mult
+        G.GAME.hands[card.ability.hand_type].level = G.GAME.hands[card.ability.hand_type].level+1
         update_hand_text({sound = 'button', volume = 0.7, pitch = 1.1, delay = 0}, {mult = 0, chips = 0, handname = '', level = ''})
     end
 }
