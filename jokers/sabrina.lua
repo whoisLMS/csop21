@@ -2,7 +2,7 @@ SMODS.Joker {
     key = "sabrina",
     atlas = "sabrina",
     rarity = 3,
-    cost = 8,
+    cost = 10,
     discovered = true,
     pos = { x = 0, y = 0 },
     config = { extra = { Xmult = 3 } },

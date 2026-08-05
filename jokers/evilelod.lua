@@ -2,7 +2,7 @@ SMODS.Joker {
     key = "evilelod",
     atlas = "evilelod",
     rarity = 3,
-    cost = 6,
+    cost = 9,
     discovered = true,
     pos = { x = 0, y = 0 },
     config = { extra = { reps = 0, rep_scale = 0.25 } },

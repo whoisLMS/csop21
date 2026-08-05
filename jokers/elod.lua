@@ -3,7 +3,7 @@ SMODS.Joker {
     atlas = "elod",
     discovered = true,
     rarity = 3,
-    cost = 6,
+    cost = 9,
     pos = { x = 0, y = 0 },
     config = { extra = { reps = 0, rep_scale = 1 } },
     loc_vars = function(self, info_queue, card)

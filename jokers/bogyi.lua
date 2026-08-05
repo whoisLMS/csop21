@@ -2,7 +2,7 @@ SMODS.Joker {
     key = "bogyi",
     atlas = "bogyi",
     rarity = 2,
-    cost = 5,
+    cost = 6,
     discovered = true,
     pos = { x = 0, y = 0 },
     config = { extra = { Xchips = 2 } },
